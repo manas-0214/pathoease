@@ -1,0 +1,132 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Pathology Login</title>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css">
+    
+    <!-- Add your CSS styles or links to external stylesheets here -->
+    <style>
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: Roboto, Arial, sans-serif;
+}
+
+html, body {
+    display: grid;
+    place-items: center;
+    height: 100%;
+    background: #ebebeb;
+}
+
+.navbar{
+    align-items: left;
+}
+
+.wrapper {
+    width: 380px; /* Adjust the width as needed */
+    /* max-width: 450px; */
+    
+    background: #fff;
+    border-radius: 5px;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+}
+
+.wrapper .title {
+    line-height: 80px;
+    background: #a130bb;
+    text-align: center;
+    border-radius: 5px 5px 0 0;
+    font-size: 25px;
+    font-weight: 600;
+    color: #fff;
+}
+
+.wrapper form {
+    padding: 30px 25px 25px 25px;
+}
+
+.wrapper form .row {
+    margin-bottom: 20px;
+    position: relative;
+}
+
+.wrapper form .row input {
+    height: 35px;
+    width: 100%;
+    outline: none;
+    padding-left: 9px;
+    border-radius: 5px;
+    border: 1px solid lightgrey;
+}
+
+.wrapper form .button input{
+    font-weight: 500;
+    font-size: 10px;
+    color: #fff;
+    padding-left: 0px;
+    background:#a130bb ;
+    border: 1px solid #a130bb;
+    cursor: pointer;
+}
+
+form .button input:hover{
+    background: #cf6be5;
+}
+
+form .row input:focus {
+    box-shadow: inset 0px 0px 2px 2px rgba(161, 48, 187, 0.25);
+}
+
+.wrapper form .signup-link{
+    text-align: center;
+    margin-top: 20px;
+    margin-bottom: 9px;
+    font-size: 14px;
+}
+
+.wrapper form .signup-link a{
+    color: #a130bb;
+    text-decoration: none;
+}
+
+.wrapper form .signup-link a:hover{
+    text-decoration: underline;
+}
+    </style>
+</head>
+<body>
+    {% extends 'navbar.html' %}
+    {% block body %}
+    <div class="wrapper">
+        <div class="title"><span>Pathology Login</span></div>
+        <form method="post" action="{{ url_for('pathology_login') }}">
+            {{ form.hidden_tag() }}
+            {% if error_message %}
+            <p class="error-message">{{ error_message }}</p>
+            {% endif %}
+            <div class="row">
+                <i class="fas fa-user"></i>
+                <label for="unique  _id">Unique ID:</label>
+                <input type="text" id="unique_id" name="unique_id" size="32" class="form-control" required>
+            </div>
+            <div class="row">
+                <i class='fas fa-lock'></i>
+                <label for="password">Password:</label>
+                <input type="password" id="password" name="password" class="form-control" required>
+            </div>
+            <div class="row button">
+                <br>
+            <input type="submit" value="Login" >
+            </div>
+            
+        </form>
+       </div>
+       {% endblock body %}
+
+</body>
+</html>
