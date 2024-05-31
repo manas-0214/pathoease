@@ -1,0 +1,484 @@
+<!doctype html>
+<html lang="en">
+
+<head>
+    <!-- Required meta tags -->
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+
+
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@400;500;700&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Nova+Square&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Oswald&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css">
+    <!-- <link rel="stylesheet" href="{{ url_for('static', filename='css/style_home.css') }}"> -->
+    <style>
+      *{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+header{
+    width:100%;
+    height: 100vh;
+    background-image: url("static/baseimg/background.png");
+    background-repeat: no-repeat;
+    background-size: 100% 100%;
+}
+.mainheader{
+    width: 100%;
+    height: 100px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.mainheader a:hover{
+    color: rgb(128, 83, 217);
+}
+
+.mainheader .logo img{
+    width: 250px;
+    height: 65px;
+    padding-left: 40px;
+}
+
+.mainheader nav{
+    width: 450px;
+    display:flex;
+    justify-content: space-around;
+    align-items: center;
+}
+
+.mainheader nav a{
+    text-decoration: none;
+    color: black;
+    text-transform: uppercase;
+    font-family: roboto;
+
+}
+
+.mainheader button{
+    padding: 10px 45px;
+    text-align: center;
+    font-size: 14px;
+    color: white;
+    border: none;
+    background-color: rgb(128, 83, 217);
+    border-radius: 10px;
+    margin-right: 40px;
+    cursor: pointer;
+}
+
+main{
+    width: 100%;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.right-sec figure img{
+    width: 480px;
+    height: 350px;
+    margin-right: 25px;
+    margin-bottom: 20px;
+}
+main .left-sec{
+    padding-left: 90px;
+
+}
+.left-sec a button{
+    transition: .5s;
+}
+
+.left-sec a button:hover{
+    background-color: transparent;
+    color: black;
+    border: 1px solid rgb(101, 65, 172);
+    border-radius: 10px;
+}
+
+.left-sec h2{
+    font-family: roboto;
+    font-size: 20px;
+    font-weight: lighter;
+    
+}
+.menubtn a button{
+    transition: .5s;
+}
+.menubtn a button:hover{
+    background-color: transparent;
+    color: black;
+    border: 1px solid rgb(101, 65, 172);
+    border-radius: 10px;
+}
+
+.left-sec h1{
+  font-family: roboto;
+  font-size: 45px;
+  font-weight: bold;
+  color: black;
+ 
+}
+
+.left-sec p{
+    font-family: roboto;
+    font-size: 15px;
+    font-weight: lighter;
+    margin-bottom: 12px;
+}
+
+.left-sec button{
+    font-family: roboto;
+    padding: 8px 45px;
+    text-align: center;
+    font-size: 14px;
+    color: white;
+    border: none;
+    background-color: rgb(128, 83, 217);
+    border-radius: 10px;
+    margin-right: 40px;
+    cursor: pointer;
+}
+
+.about {
+    padding: 4rem 7%;
+    background-color: rgb(255, 255, 255);
+}
+
+.main-about {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 15px;
+}
+
+.inner-about {
+    display: flex;
+    flex-direction: row; /* Align items horizontally */
+    justify-content: space-between; /* Put space between image and text */
+    align-items: center;
+    max-width: 1100px; /* Adjust the max-width as needed */
+    margin: 0 auto; /* Center content */
+}
+
+.about-content {
+    flex: 1;
+    width: 80% ;
+}
+
+.about-content h1{
+    font-size: 40px;
+    margin-bottom: 15px;
+    font-family: 'Oswald', sans-serif;
+}
+
+.about-content p{
+    font-size: 1.5rem;
+    margin-bottom: 30px;
+    overflow: auto;
+    font-family: 'Nova Square', sans-serif;
+}
+
+.about-content img {
+    max-width: 100%; /* Ensure the image doesn't exceed its container */
+    height: auto;
+    display: block;
+    border-radius: 5px; /* Optional: Add border-radius for image */
+}
+
+.about-content a{
+    background:rgb(128, 83, 217) ;
+    padding: 1rem 3rem;
+    font-size: 1.5rem;
+    color: white;
+    transition: .5s;
+    text-decoration: none;
+}
+.about-content a:hover{
+    background: transparent;
+    border: 1px solid rgb(101, 65, 172);
+    color: black;
+}
+
+.our-services {
+    padding: 4rem 7%;
+}
+.service-content {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    flex-wrap: wrap;
+    gap: 50px;
+}
+.left-service-content {
+    flex: 1 1 calc(60% - 25px); /* Adjust width for the text content */
+    /* Subtract 25px (half of the gap) from 60% for better alignment */
+}
+.right-service-content {
+    flex: 1 1 calc(40% - 25px); /* Adjust width for the button content */
+    display: flex;
+    justify-content: flex-end;
+    align-items: center; /* Align button vertically */
+}
+.left-service-content h1 {
+    font-size: 40px;
+    margin-bottom: 15px;
+    font-family: 'Oswald', sans-serif;
+}
+.left-service-content p {
+    font-size: 1.5rem;
+    margin-bottom: 0; /* Remove default margin */
+    font-family: 'Nova Square', sans-serif;
+}
+.right-service-content .right-btn a {
+    padding: 1.5rem 3rem;
+    font-size: 1.5rem;
+    color: white;
+    background: rgb(128, 83, 217);
+    text-decoration: none;
+    transition: .5s;
+    display: inline-block; /* Ensure button stays inline */
+}
+.right-service-content .right-btn a:hover {
+    border: 1px solid rgb(101, 65, 172);
+    background-color: transparent;
+    color: black;
+}
+
+.services-container {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    align-items: flex-start;
+    gap: 15px;
+}
+
+.main-services {
+     padding: 6rem;
+    display: flex;
+    justify-content: space-between; 
+    flex-wrap: wrap;
+    gap: 15px;
+    max-width: 1200px; 
+    margin: 0 auto; 
+    margin-top: 10px;
+    align-items: center;
+}
+
+.inner-services-content {
+    position: relative;
+    flex: 1 1 calc(30% - 15px); 
+    max-width: calc(30% - 15px); 
+    padding: 2rem 1rem;
+    background-color: #f9f9f9;
+    border-radius: 8px; 
+    text-align: center;
+    align-items: center;
+    flex-direction: column;
+}
+.inner-services-content h2 {
+    font-size: 25px;
+    margin-bottom: 10px;
+    font-family: 'Oswald', sans-serif;
+
+}
+.inner-services-content p {
+    font-size: 1.5rem;
+}
+
+.service-icon {
+    width: 8rem;
+    height: 8rem;
+    border-radius: 50%;
+    text-align: center;
+    background-color: rgb(207, 186, 250);
+    margin-bottom: 15px;
+    cursor: pointer;
+    transition: 0.5s all ease-in-out;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    display: flex;
+    margin-left: 70px;
+   
+}
+
+.service-icon i {
+    font-size: 3rem; 
+    color: rgb(79, 51, 135);
+    line-height: 1; 
+}
+
+.service-icon:hover {
+    background-color: rgb(207, 186, 250);
+    transform: scale(0.9);
+} 
+
+
+ul {
+    font-family: 'Nova Square', sans-serif;
+    list-style-type: none; 
+    padding-left: 20px;    
+}
+li::before {
+    content: '\2022';  
+    color: #6e45cc7b;     
+    margin-right: 8px;  
+}
+.footer{
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    grid-template-columns: 1fr 1fr;
+    padding-bottom: 50px;
+    padding-left: 80px;
+    padding-top: 80px;
+    padding-right: 80px;
+    margin-top: 50px;
+    background-color: rgb(176, 158, 219);
+    bottom: 0;
+    width: 100%;
+    height: 350px;
+} 
+.contact, .helpline,.Add{
+    margin-left: 50px;
+    margin-right: 50px;
+    padding-top: 30px;
+    padding-left: 20px;
+    padding-right: 20px;    
+    color:rgb(0, 0, 0);
+    padding-bottom: 50px;
+    border-radius: 5px;
+    
+}
+.footer h3{
+    margin-bottom: 10px;
+    font-weight: 700;
+
+    }
+      </style>
+    <title>Hello, world!</title>
+
+</head>
+
+<body>
+    <header>
+        <div class="mainheader" id="main_header">
+            <div class="logo"><a href="base.html"><img src="static/baseimg/logo.png" alt=""></a></div>
+
+            <nav>
+                <a href="#main_header">Home</a>
+                <a href="#about_page">About</a>
+                <a href="#contact_us">Contact</a>
+                <a href="#contact_us">Helpline</a>
+            </nav>
+            <div class="menubtn">
+
+                <a href="{{ url_for('main_login') }}"><button>Login</button></a>
+            </div>
+        </div>
+
+        <main>
+            <section class="left-sec">
+                <h3>We Are Here For Your Care</h2>
+                <h1>TESTING MADE EASIER </h1>
+                <p>with Patho Ease</p>
+                <a href="{{ url_for('main_login') }}"><button>Make an appointment</button></a>
+
+            </section>
+
+            <section class="right-sec">
+                <figure>
+                    <img src="static/baseimg/mainbg.png" alt="">
+                </figure>
+            </section>
+        </main>
+    </header>
+    <div class="about" id="about_page">
+        <div class="main-about">
+            <div class="inner-about">
+                <div class="about-content">
+                    <h1>About PathoEase</h1>
+                    <p>
+                        Welcome to PathoEase, your trusted online resource for comprehensive and reliable pathology information. Our
+                        mission is to empower individuals with knowledge about various pathological conditions, enabling them to
+                        make informed decisions about their health.
+                    </p>
+                    <a href="#">Read more</a>
+                </div>
+                <div class="about-content">
+                    <img src="static/baseimg/about-image.jpg" alt="">
+                </div>
+            </div>
+        </div>
+    </div>
+    
+    <div class="our-services">
+        <div class="service-content">
+            <div class="left-service-content">
+                <h1>Our special services</h1>
+                <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Cum est illum placeat quas adipisci ipsa soluta pariatur quaerat aliquid, consectetur harum animi mollitia, accusamus veniam maiores deleniti similique eaque provident?</p>
+            </div>
+
+            <div class="right-service-content">
+                <div class="right-btn">
+                    <a href="#">See all services</a>
+                </div>
+             </div>
+        </div>
+    
+     <div class="main-services">
+        <div class="inner-services-content">
+            <div class="service-icon">
+                <i class="fa-solid fa-bed-pulse"></i>
+            </div> 
+            <h2>Full body checkup</h2>
+            <p>Our Whole Body Check is a comprehensive health check package which helps in the overall assessment of all the organs and systems of the body such as Heart, Lungs, Kidneys, Liver, Breast, Eyes, ENT and Dental etc. </p>
+        </div>
+
+        <div class="inner-services-content">
+            <div class="service-icon">
+                <i class="fa-solid fa-flask-vial"></i>
+            </div> 
+            <h2>Blood test</h2>
+            <p>A blood test is one of the most common tests healthcare providers use to monitor your overall health or help diagnose medical conditions. </p>
+        </div>
+
+        <div class="inner-services-content">
+            <div class="service-icon">
+                <i class="fa-solid fa-microscope"></i>
+            </div> 
+            <h2>Hemoglobin A1C test</h2>
+            <p>The A1C test is a common blood test used to diagnose type 1 and type 2 diabetes. If you're living with diabetes, the test is also used to monitor how well you're managing blood sugar levels. </p>
+        </div>
+    </div>
+</div>        
+     
+    <div class="footer" id="contact_us">
+        <div class="contact">
+            <h3>Contact Us</h3>
+            <p>
+                <b>Email : </b>contact@pathoease.com
+            </p>
+            <br>
+        </div>
+        <div class="Add">
+            <h3 >Address</h3>
+            Nirala residency ,Greater Noida</p>
+            <br>
+        </div>
+        <div class="helpline">
+            <h3 style="text-align: right;">Helpline No</h3>
+            1800 555 6767</p>
+            <br>
+        </div>
+    </div>
+    
+</body>
+
+</html>
